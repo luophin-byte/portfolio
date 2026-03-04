@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RHSJVR27EG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RHSJVR27EG');
-</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио - SEO-описания для маркетплейсов</title>
+    <title>SEO-описания для маркетплейсов</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHSJVR27EG"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RHSJVR27EG');
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -20,193 +22,257 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            color: #000;
+            background: #fff;
             padding: 60px 40px;
-            text-align: center;
+            max-width: 1400px;
+            margin: 0 auto;
         }
         
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 15px;
+        @media (max-width: 768px) {
+            body {
+                padding: 40px 20px;
+            }
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-bottom: 100px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 4rem);
             font-weight: 700;
-        }
-        
-        .header .subtitle {
-            font-size: 1.3em;
-            margin-bottom: 25px;
-            opacity: 0.95;
-        }
-        
-        .header .price {
-            background: rgba(255,255,255,0.2);
-            display: inline-block;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-size: 1.1em;
-            font-weight: 600;
-        }
-        
-        /* What You Get Section */
-        .benefits {
-            padding: 50px 40px;
-            background: #f8f9fa;
-        }
-        
-        .benefits h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 40px;
-            color: #667eea;
-        }
-        
-        .benefit-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .benefit-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .benefit-card .emoji {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-        
-        .benefit-card h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-        
-        .benefit-card p {
-            color: #666;
-            line-height: 1.7;
-        }
-        
-        /* Examples Section */
-        .examples {
-            padding: 50px 40px;
-        }
-        
-        .examples h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 50px;
-            color: #333;
-        }
-        
-        .example {
+            line-height: 1.2;
             margin-bottom: 60px;
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 40px;
+            letter-spacing: -0.02em;
+            max-width: 900px;
+        }
+        
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 968px) {
+            .intro-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+        
+        .intro-text h2 {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 30px;
+            opacity: 0.6;
+        }
+        
+        .intro-text p {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .intro-text .emphasis {
+            font-weight: 500;
+            font-size: 1.25rem;
+            line-height: 1.6;
+        }
+        
+        /* Services */
+        .services {
+            margin-bottom: 100px;
+        }
+        
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 40px;
+            opacity: 0.6;
+        }
+        
+        .service-item {
+            border-top: 1px solid #000;
+            padding: 30px 0;
+        }
+        
+        .service-item:last-child {
+            border-bottom: 1px solid #000;
+        }
+        
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .service-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+        
+        .service-price {
+            font-size: 1.25rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .service-description {
+            font-size: 1rem;
+            line-height: 1.7;
+            opacity: 0.7;
+            max-width: 700px;
+        }
+        
+        /* Pricing */
+        .pricing {
+            margin-bottom: 100px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 968px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .pricing-card {
+            border: 1px solid #000;
+            padding: 40px 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            background: #000;
+            color: #fff;
+        }
+        
+        .pricing-card .tier {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+        
+        .pricing-card:hover .tier {
+            opacity: 0.8;
+        }
+        
+        .pricing-card .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.02em;
+        }
+        
+        .pricing-card .volume {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+        
+        .pricing-card:hover .volume {
+            opacity: 0.9;
+        }
+        
+        .pricing-card .savings {
+            font-size: 0.875rem;
+            opacity: 0.6;
+            font-style: italic;
+        }
+        
+        .pricing-card:hover .savings {
+            opacity: 0.8;
+        }
+        
+        /* Examples */
+        .examples {
+            margin-bottom: 100px;
+        }
+        
+        .example-item {
+            margin-bottom: 80px;
         }
         
         .example-title {
-            text-align: center;
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            color: #667eea;
+            font-size: 1.75rem;
             font-weight: 600;
+            margin-bottom: 30px;
+            letter-spacing: -0.01em;
         }
         
         .comparison {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 60px;
+            margin-bottom: 40px;
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
             .comparison {
                 grid-template-columns: 1fr;
             }
         }
         
         .before, .after {
-            padding: 30px;
-            border-radius: 12px;
-            position: relative;
-        }
-        
-        .before {
-            background: #ffe5e5;
-            border: 2px solid #ff4444;
-        }
-        
-        .after {
-            background: #e5ffe5;
-            border: 2px solid #44ff44;
+            border-left: 3px solid #000;
+            padding-left: 30px;
         }
         
         .label {
-            display: inline-block;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-weight: 700;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
             margin-bottom: 20px;
-            font-size: 0.9em;
+            opacity: 0.6;
         }
         
-        .before .label {
-            background: #ff4444;
-            color: white;
+        .text-content {
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
         
-        .after .label {
-            background: #44cc44;
-            color: white;
-        }
-        
-        .description-text {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            min-height: 150px;
-            font-size: 0.95em;
-            line-height: 1.7;
+        .text-content strong {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
         }
         
         .improvements {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin-top: 20px;
+            background: #f5f5f5;
+            padding: 30px;
+            margin-top: 40px;
         }
         
         .improvements h4 {
-            color: #667eea;
-            margin-bottom: 15px;
-            font-size: 1.2em;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
         }
         
         .improvements ul {
@@ -218,855 +284,412 @@
             padding: 8px 0;
             padding-left: 30px;
             position: relative;
-            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         .improvements li:before {
-            content: "✓";
+            content: "→";
             position: absolute;
             left: 0;
-            color: #44cc44;
             font-weight: bold;
-            font-size: 1.2em;
         }
         
         .results {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 25px;
-            border-radius: 12px;
-            margin-top: 20px;
-            text-align: center;
-        }
-        
-        .results h4 {
-            margin-bottom: 15px;
-            font-size: 1.2em;
-        }
-        
-        .stats {
             display: flex;
-            justify-content: space-around;
+            gap: 40px;
+            margin-top: 30px;
             flex-wrap: wrap;
-            gap: 20px;
         }
         
-        .stat {
-            text-align: center;
+        .result-item {
+            flex: 1;
+            min-width: 150px;
         }
         
-        .stat .number {
-            font-size: 2em;
-            font-weight: bold;
+        .result-number {
+            font-size: 2rem;
+            font-weight: 700;
             margin-bottom: 5px;
         }
         
-        .stat .label-small {
-            font-size: 0.9em;
-            opacity: 0.9;
+        .result-label {
+            font-size: 0.875rem;
+            opacity: 0.7;
         }
         
-        /* How It Works */
-        .how-it-works {
-            padding: 50px 40px;
-            background: #f8f9fa;
+        /* Process */
+        .process {
+            margin-bottom: 100px;
         }
         
-        .how-it-works h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 40px;
-            color: #667eea;
-        }
-        
-        .steps {
+        .process-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-top: 40px;
         }
         
-        .step {
-            text-align: center;
-            padding: 30px 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        @media (max-width: 968px) {
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 568px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .process-step {
+            border-top: 3px solid #000;
+            padding-top: 20px;
         }
         
         .step-number {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8em;
-            font-weight: bold;
-            margin: 0 auto 20px;
-        }
-        
-        .step h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-        
-        .step p {
-            color: #666;
-            font-size: 0.95em;
-        }
-        
-        /* Why Matters Section */
-        .why-matters {
-            padding: 50px 40px;
-            background: #f8f9fa;
-        }
-        
-        .why-matters h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: #667eea;
-        }
-        
-        .research-intro {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 1.1em;
-            color: #555;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-        
-        .stat-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .stat-icon {
-            font-size: 3em;
-            margin-bottom: 15px;
-        }
-        
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        
-        .stat-text {
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        
-        .stat-source {
-            font-size: 0.85em;
-            color: #999;
-            font-style: italic;
-        }
-        
-        .research-details {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-        }
-        
-        .research-details h3 {
-            color: #667eea;
-            font-size: 1.5em;
-            margin-bottom: 30px;
-        }
-        
-        .research-point {
-            margin-bottom: 35px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .research-point:last-child {
-            border-bottom: none;
-        }
-        
-        .research-title {
-            font-size: 1.2em;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 15px;
-        }
-        
-        .research-content {
-            color: #555;
-            line-height: 1.8;
-        }
-        
-        .research-content p {
-            margin-bottom: 12px;
-        }
-        
-        .highlight-box {
-            background: #f0f4ff;
-            border-left: 4px solid #667eea;
-            padding: 15px 20px;
-            margin-top: 15px;
-            border-radius: 5px;
-            font-weight: 500;
-        }
-        
-        .why-me-section {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-        }
-        
-        .why-me-section h3 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        
-        .why-me-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-        
-        .why-me-card {
-            background: #f8f9fa;
-            padding: 25px;
-            border-radius: 12px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        
-        .why-me-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        
-        .why-me-icon {
-            font-size: 2.5em;
-            margin-bottom: 15px;
-        }
-        
-        .why-me-card h4 {
-            color: #667eea;
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        
-        .why-me-card p {
-            color: #666;
-            line-height: 1.7;
-            font-size: 0.95em;
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            padding: 50px 40px;
-            background: white;
-        }
-        
-        .testimonials h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #667eea;
-        }
-        
-        .testimonials-note {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 20px;
-            background: #f0f4ff;
-            border-radius: 10px;
-            color: #555;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .testimonial-card {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-3px);
-        }
-        
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-avatar {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5em;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-        
-        .testimonial-info {
-            flex-grow: 1;
-        }
-        
-        .testimonial-name {
+            font-size: 3rem;
             font-weight: 700;
-            color: #333;
-            font-size: 1.1em;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
+            opacity: 0.15;
         }
         
-        .testimonial-role {
-            color: #999;
-            font-size: 0.9em;
-        }
-        
-        .testimonial-text {
-            color: #555;
-            line-height: 1.7;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-        
-        .testimonial-result {
-            background: white;
-            padding: 12px 15px;
-            border-radius: 8px;
-            color: #667eea;
+        .step-title {
+            font-size: 1.125rem;
             font-weight: 600;
-            font-size: 0.95em;
+            margin-bottom: 10px;
         }
         
-        /* CTA Section */
+        .step-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.7;
+        }
+        
+        /* CTA */
         .cta {
+            border: 3px solid #000;
             padding: 60px 40px;
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            margin-bottom: 60px;
         }
         
         .cta h2 {
-            font-size: 2.2em;
+            font-size: clamp(1.75rem, 4vw, 3rem);
+            font-weight: 700;
             margin-bottom: 20px;
+            letter-spacing: -0.02em;
         }
         
         .cta p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            opacity: 0.95;
+            font-size: 1.125rem;
+            margin-bottom: 40px;
+            opacity: 0.7;
         }
         
         .cta-button {
             display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 18px 50px;
-            border-radius: 30px;
+            background: #000;
+            color: #fff;
+            padding: 20px 50px;
+            font-size: 1rem;
+            font-weight: 600;
             text-decoration: none;
-            font-weight: 700;
-            font-size: 1.2em;
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            border: 3px solid #000;
         }
         
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            background: #fff;
+            color: #000;
         }
         
         .guarantee {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
-            font-size: 0.95em;
+            margin-top: 40px;
+            font-size: 0.95rem;
+            opacity: 0.6;
+        }
+        
+        /* Contact */
+        .contact {
+            padding-top: 40px;
+            border-top: 1px solid #000;
+        }
+        
+        .contact h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            opacity: 0.6;
+        }
+        
+        .contact-info {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-item {
+            font-size: 1.125rem;
+        }
+        
+        .contact-item a {
+            color: #000;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            border-bottom-color: #000;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>📈 Превращаю "невидимые" карточки в продающие</h1>
-            <p class="subtitle">SEO-оптимизация описаний товаров для Wildberries и Ozon</p>
-            <p class="price">💰 200₽ за товар | 🎁 Первые 2-3 карточки БЕСПЛАТНО</p>
-        </div>
-
-        <!-- Benefits -->
-        <div class="benefits">
-            <h2>Что вы получите</h2>
-            <div class="benefit-grid">
-                <div class="benefit-card">
-                    <div class="emoji">🔍</div>
-                    <h3>SEO-оптимизация</h3>
-                    <p>Товар находят в поиске по 10-20 запросам вместо 2-3. Больше показов = больше продаж.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="emoji">📋</div>
-                    <h3>Структура и читабельность</h3>
-                    <p>Покупатель понимает за 5 секунд, подходит ли ему товар. Никакой воды — только суть.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="emoji">⭐</div>
-                    <h3>Преимущества товара</h3>
-                    <p>Показываем конкретные выгоды для покупателя. Конверсия в покупку растёт на 20-40%.</p>
-                </div>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Превращаю невидимые карточки товаров в продающие — через SEO-описания для Wildberries и Ozon</h1>
+        
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>О сервисе</h2>
+                <p>Специализируюсь на SEO-оптимизации описаний для маркетплейсов. Помогаю продавцам китайских товаров, локальных брендов и handmade-мастерам увеличить видимость в поиске и конверсию в покупку.</p>
+                <p class="emphasis">Первые 2-3 карточки делаю бесплатно — вы ничем не рискуете.</p>
+            </div>
+            
+            <div class="intro-text">
+                <h2>Подход</h2>
+                <p>Работаю на стыке SEO, копирайтинга и понимания алгоритмов маркетплейсов. Использую AI как инструмент, но каждое описание проверяю и дорабатываю вручную под конкретный товар и аудиторию.</p>
+                <p>Фокус на результате: больше показов в поиске, выше кликабельность, больше продаж.</p>
             </div>
         </div>
-
-        <!-- Examples -->
-        <div class="examples">
-            <h2>Примеры моих работ</h2>
-
-            <!-- Example 1 -->
-            <div class="example">
-                <div class="example-title">📦 Пример 1: Блок питания 9V 2A</div>
-                
-                <div class="comparison">
-                    <div class="before">
-                        <span class="label">❌ ДО (как было)</span>
-                        <div class="description-text">
-                            Блок питания 9v 2A с разъёмом 5.5x2.5
-                        </div>
-                        <div style="margin-top: 20px; padding: 15px; background: rgba(255,0,0,0.1); border-radius: 8px;">
-                            <strong>Проблемы:</strong><br>
-                            • Товар НЕ находят в поиске<br>
-                            • Нет ключевых слов<br>
-                            • Покупатель не понимает применение<br>
-                            • Нет конкурентных преимуществ
-                        </div>
+    </div>
+    
+    <!-- Services -->
+    <div class="services">
+        <h2 class="section-title">Что вы получите</h2>
+        
+        <div class="service-item">
+            <div class="service-header">
+                <div class="service-name">SEO-оптимизация</div>
+            </div>
+            <div class="service-description">
+                Товар находят в поиске по 10-20 запросам вместо 2-3. Добавляю все релевантные ключевые слова, которые используют покупатели. Результат — больше показов, больше переходов.
+            </div>
+        </div>
+        
+        <div class="service-item">
+            <div class="service-header">
+                <div class="service-name">Структура и читабельность</div>
+            </div>
+            <div class="service-description">
+                Покупатель понимает за 5 секунд, подходит ли ему товар. Использую списки, чёткую структуру, конкретные факты. Никакой воды — только суть.
+            </div>
+        </div>
+        
+        <div class="service-item">
+            <div class="service-header">
+                <div class="service-name">Преимущества товара</div>
+            </div>
+            <div class="service-description">
+                Показываю конкретные выгоды для покупателя через цифры, факты, сценарии использования. Не "высокое качество", а "выдерживает 10,000 изгибов". Конверсия в покупку растёт на 20-40%.
+            </div>
+        </div>
+    </div>
+    
+    <!-- Pricing -->
+    <div class="pricing">
+        <h2 class="section-title">Стоимость</h2>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="tier">Стартовый</div>
+                <div class="price">150₽</div>
+                <div class="volume">за товар</div>
+                <div class="savings">до 50 товаров</div>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="tier">Оптимальный</div>
+                <div class="price">120₽</div>
+                <div class="volume">за товар</div>
+                <div class="savings">50-99 товаров<br>экономия 20%</div>
+            </div>
+            
+            <div class="pricing-card">
+                <div class="tier">Максимальный</div>
+                <div class="price">100₽</div>
+                <div class="volume">за товар</div>
+                <div class="savings">100+ товаров<br>экономия 33%</div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 40px; font-size: 1rem; opacity: 0.7;">
+            Первые 2-3 карточки — бесплатно. Смотрите результат, потом решаете продолжать или нет.
+        </div>
+    </div>
+    
+    <!-- Examples -->
+    <div class="examples">
+        <h2 class="section-title">Примеры работ</h2>
+        
+        <div class="example-item">
+            <div class="example-title">Блок питания 9V 2A</div>
+            
+            <div class="comparison">
+                <div class="before">
+                    <div class="label">До</div>
+                    <div class="text-content">
+                        Блок питания 9v 2A с разъёмом 5.5x2.5
                     </div>
-                    
-                    <div class="after">
-                        <span class="label">✅ ПОСЛЕ (как стало)</span>
-                        <div class="description-text">
-                            <strong>Блок питания 9V 2A (DC 5.5x2.5 мм) — надёжное питание для ваших устройств</strong><br><br>
-                            
-                            Универсальный сетевой адаптер для роутеров, модемов, LED-лент, камер видеонаблюдения и других устройств с разъёмом 5.5x2.5 мм.<br><br>
-                            
-                            <strong>Преимущества:</strong><br>
-                            ✅ Выходное напряжение: 9V постоянного тока<br>
-                            ✅ Максимальный ток: 2A (мощность до 18W)<br>
-                            ✅ Защита от перегрузки и короткого замыкания<br>
-                            ✅ Длина кабеля: 1 метр<br><br>
-                            
-                            <strong>Подходит для:</strong> Wi-Fi роутеров, камер видеонаблюдения, LED-лент, аудиооборудования, педалей эффектов для гитары
-                        </div>
+                    <div style="margin-top: 20px; font-size: 0.95rem; opacity: 0.7;">
+                        <strong>Проблемы:</strong><br>
+                        Товар не находят в поиске. Нет ключевых слов. Покупатель не понимает применение.
                     </div>
                 </div>
                 
-                <div class="improvements">
-                    <h4>Что изменилось:</h4>
-                    <ul>
-                        <li>Добавлены ключевые слова для поиска (блок питания роутера, адаптер 9v, зарядное устройство)</li>
-                        <li>Показаны конкретные применения — покупатель сразу понимает, подходит ли товар</li>
-                        <li>Структурирован текст — легко читать и сканировать взглядом</li>
-                        <li>Добавлены технические характеристики и преимущества</li>
-                        <li>Указаны защитные функции — повышает доверие</li>
-                    </ul>
-                </div>
-                
-                <div class="results">
-                    <h4>📊 Прогнозируемый результат:</h4>
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="number">+40%</div>
-                            <div class="label-small">Показов в поиске</div>
-                        </div>
-                        <div class="stat">
-                            <div class="number">+25%</div>
-                            <div class="label-small">Конверсия</div>
-                        </div>
-                        <div class="stat">
-                            <div class="number">15+</div>
-                            <div class="label-small">Ключевых запросов</div>
-                        </div>
+                <div class="after">
+                    <div class="label">После</div>
+                    <div class="text-content">
+                        <strong>Блок питания 9V 2A (DC 5.5x2.5 мм) — надёжное питание для ваших устройств</strong><br><br>
+                        
+                        Универсальный сетевой адаптер для роутеров, модемов, LED-лент, камер видеонаблюдения.<br><br>
+                        
+                        <strong>Преимущества:</strong><br>
+                        • Выходное напряжение: 9V постоянного тока<br>
+                        • Максимальный ток: 2A (мощность до 18W)<br>
+                        • Защита от перегрузки и короткого замыкания<br>
+                        • Длина кабеля: 1 метр<br><br>
+                        
+                        <strong>Подходит для:</strong> Wi-Fi роутеров, камер видеонаблюдения, LED-лент, аудиооборудования
                     </div>
                 </div>
             </div>
-
-            <!-- Example 2 -->
-            <div class="example">
-                <div class="example-title">📦 Пример 2: Держатель для кабелей</div>
-                
-                <div class="comparison">
-                    <div class="before">
-                        <span class="label">❌ ДО (как было)</span>
-                        <div class="description-text">
-                            Держатель для проводов. Крепится на стол. Удобный.
-                        </div>
-                        <div style="margin-top: 20px; padding: 15px; background: rgba(255,0,0,0.1); border-radius: 8px;">
-                            <strong>Проблемы:</strong><br>
-                            • Слишком короткое описание<br>
-                            • Нет конкретики<br>
-                            • Нет преимуществ<br>
-                            • Плохая видимость в поиске
-                        </div>
-                    </div>
-                    
-                    <div class="after">
-                        <span class="label">✅ ПОСЛЕ (как стало)</span>
-                        <div class="description-text">
-                            <strong>Держатель для кабелей — организуйте провода на столе, в машине и дома</strong><br><br>
-                            
-                            Универсальные фиксаторы для зарядных кабелей, наушников, USB-проводов толщиной от 2.8 до 6.8 мм.<br><br>
-                            
-                            <strong>Преимущества:</strong><br>
-                            ✅ Без магнитов — не вредит картам и гаджетам<br>
-                            ✅ Гладкие края — не царапают кабели<br>
-                            ✅ Механическая блокировка — надежнее магнитных<br>
-                            ✅ Устойчивы к температурам — для авто и ванной<br><br>
-                            
-                            <strong>Применение:</strong> офис, дом, автомобиль, кровать, туалетный столик
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="improvements">
-                    <h4>Что изменилось:</h4>
-                    <ul>
-                        <li>Добавлен эмоциональный заголовок — "организуйте провода"</li>
-                        <li>Указаны размеры совместимости (2.8-6.8 мм)</li>
-                        <li>Показаны уникальные преимущества (без магнитов, гладкие края)</li>
-                        <li>Добавлены сценарии использования</li>
-                        <li>SEO-ключи: держатель проводов, органайзер кабелей, фиксатор для зарядки</li>
-                    </ul>
-                </div>
-                
-                <div class="results">
-                    <h4>📊 Прогнозируемый результат:</h4>
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="number">+60%</div>
-                            <div class="label-small">Кликов на карточку</div>
-                        </div>
-                        <div class="stat">
-                            <div class="number">+35%</div>
-                            <div class="label-small">Продаж</div>
-                        </div>
-                        <div class="stat">
-                            <div class="number">12+</div>
-                            <div class="label-small">Ключевых запросов</div>
-                        </div>
-                    </div>
-                </div>
+            
+            <div class="improvements">
+                <h4>Что изменилось</h4>
+                <ul>
+                    <li>Добавлены ключевые слова для поиска (блок питания роутера, адаптер 9v)</li>
+                    <li>Показаны конкретные применения — покупатель сразу понимает, подходит ли товар</li>
+                    <li>Структурирован текст — легко читать и сканировать взглядом</li>
+                    <li>Добавлены технические характеристики и защитные функции</li>
+                </ul>
             </div>
-
-            <!-- Example 3 -->
-            <div class="example">
-                <div class="example-title">📦 Пример 3: USB-кабель Type-C</div>
-                
-                <div class="comparison">
-                    <div class="before">
-                        <span class="label">❌ ДО (как было)</span>
-                        <div class="description-text">
-                            Кабель USB Type-C. Длина 1 метр. Быстрая зарядка.
-                        </div>
-                        <div style="margin-top: 20px; padding: 15px; background: rgba(255,0,0,0.1); border-radius: 8px;">
-                            <strong>Проблемы:</strong><br>
-                            • Общие фразы без конкретики<br>
-                            • Нет технических характеристик<br>
-                            • Не указаны преимущества<br>
-                            • Минимум ключевых слов
-                        </div>
-                    </div>
-                    
-                    <div class="after">
-                        <span class="label">✅ ПОСЛЕ (как стало)</span>
-                        <div class="description-text">
-                            <strong>Кабель USB Type-C быстрая зарядка 60W — заряжает за 30 минут</strong><br><br>
-                            
-                            Прочный кабель для зарядки и передачи данных со скоростью до 480 Мбит/с. Подходит для телефонов, планшетов, ноутбуков с USB-C.<br><br>
-                            
-                            <strong>Характеристики:</strong><br>
-                            ✅ Мощность: 60W (20V/3A) — заряжает MacBook и ноутбуки<br>
-                            ✅ Длина: 1 метр — оптимально для использования<br>
-                            ✅ Усиленная оплетка — выдерживает 10000+ изгибов<br>
-                            ✅ Позолоченные контакты — стабильное соединение<br><br>
-                            
-                            <strong>Совместимость:</strong> Samsung, Xiaomi, Huawei, MacBook, iPad Pro, Google Pixel, любые устройства с Type-C
-                        </div>
-                    </div>
+            
+            <div class="results">
+                <div class="result-item">
+                    <div class="result-number">+40%</div>
+                    <div class="result-label">показов в поиске</div>
                 </div>
-                
-                <div class="improvements">
-                    <h4>Что изменилось:</h4>
-                    <ul>
-                        <li>Конкретная мощность (60W) и время зарядки (30 минут)</li>
-                        <li>Указаны технические характеристики (20V/3A, 480 Мбит/с)</li>
-                        <li>Добавлена долговечность (10000+ изгибов)</li>
-                        <li>Перечислены совместимые устройства и бренды</li>
-                        <li>SEO-ключи: кабель type-c, быстрая зарядка, usb-c 60w, зарядка для макбук</li>
-                    </ul>
+                <div class="result-item">
+                    <div class="result-number">+25%</div>
+                    <div class="result-label">конверсия</div>
                 </div>
-                
-                <div class="results">
-                    <h4>📊 Прогнозируемый результат:</h4>
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="number">+50%</div>
-                            <div class="label-small">Показов в поиске</div>
-                        </div>
-                        <div class="stat">
-                            <div class="number">+30%</div>
-                            <div class="label-small">Конверсия</div>
-                        </div>
-                        <div class="stat">
-                            <div class="number">18+</div>
-                            <div class="label-small">Ключевых запросов</div>
-                        </div>
-                    </div>
+                <div class="result-item">
+                    <div class="result-number">15+</div>
+                    <div class="result-label">ключевых запросов</div>
                 </div>
             </div>
         </div>
-
-        <!-- Why This Matters - Research Section -->
-        <div class="why-matters">
-            <h2>Почему это критически важно для ваших продаж</h2>
+        
+        <div class="example-item">
+            <div class="example-title">Держатель для кабелей</div>
             
-            <div class="research-intro">
-                <p>Это не просто красивые слова — это подтверждённые данные исследований и статистика маркетплейсов:</p>
-            </div>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">🔍</div>
-                    <div class="stat-number">70%</div>
-                    <div class="stat-text">покупателей находят товар через <strong>поиск</strong> на маркетплейсе</div>
-                    <div class="stat-source">Источник: Исследование Wildberries, 2024</div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon">📊</div>
-                    <div class="stat-number">67%</div>
-                    <div class="stat-text">компаний e-commerce используют <strong>нейросети для генерации контента</strong>, но без ручной доработки результаты слабые</div>
-                    <div class="stat-source">Источник: Анализ рынка генеративного ИИ, 2025</div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon">📈</div>
-                    <div class="stat-number">+40%</div>
-                    <div class="stat-text">к показам получают товары с <strong>правильной SEO-оптимизацией</strong> описаний</div>
-                    <div class="stat-source">Источник: Данные продавцов Ozon, 2024-2025</div>
-                </div>
-                
-                <div class="stat-card">
-                    <div class="stat-icon">⚡</div>
-                    <div class="stat-number">5 сек</div>
-                    <div class="stat-text">— столько времени у вас есть, чтобы <strong>убедить покупателя</strong> в карточке товара</div>
-                    <div class="stat-source">Источник: Исследования поведения пользователей e-commerce</div>
-                </div>
-            </div>
-            
-            <div class="research-details">
-                <h3>🎯 Что говорят исследования и эксперты:</h3>
-                
-                <div class="research-point">
-                    <div class="research-title">1. Алгоритмы маркетплейсов ранжируют по ключевым словам</div>
-                    <div class="research-content">
-                        <p>По данным аналитиков Wildberries и Ozon, первые 120-140 символов названия товара — это ядро для SEO. Дополнительные LSI-ключи (синонимы и связанные запросы) необходимо размещать в описание и характеристики.</p>
-                        <p><strong>Без правильных ключевых слов</strong> ваш товар просто не попадёт в результаты поиска, даже если он идеально подходит покупателю.</p>
+            <div class="comparison">
+                <div class="before">
+                    <div class="label">До</div>
+                    <div class="text-content">
+                        Держатель для проводов. Крепится на стол. Удобный.
                     </div>
                 </div>
                 
-                <div class="research-point">
-                    <div class="research-title">2. Текст на инфографике НЕ индексируется</div>
-                    <div class="research-content">
-                        <p>Многие продавцы делают красивую инфографику с преимуществами товара, но забывают продублировать эту информацию в текстовом описании.</p>
-                        <p><strong>Результат:</strong> Поисковая система маркетплейса не видит эти ключевые слова, и товар не показывается по релевантным запросам.</p>
-                        <p class="highlight-box">💡 Правильно: Инфографика для визуала + полное текстовое описание с SEO = максимум продаж</p>
-                    </div>
-                </div>
-                
-                <div class="research-point">
-                    <div class="research-title">3. Конкуренция на маркетплейсах растёт</div>
-                    <div class="research-content">
-                        <p>На Ozon и Wildberries в 2024-2025 году работают 1,26 млн продавцов. Каждый месяц появляется 15-20 тысяч новых продавцов.</p>
-                        <p><strong>Рынок переживает консолидацию</strong> — слабые продавцы с плохими карточками уходят, сильные с качественным оформлением остаются и растут.</p>
-                        <p>Товары с профессиональным описанием получают значительно больше показов и кликов, чем конкуренты с описанием "из одной строчки".</p>
-                    </div>
-                </div>
-                
-                <div class="research-point">
-                    <div class="research-title">4. Покупатели НЕ читают длинные тексты</div>
-                    <div class="research-content">
-                        <p>Исследования поведения пользователей показывают: <strong>покупатель принимает решение за 3-5 секунд</strong> просмотра карточки.</p>
-                        <p>Если описание неструктурированное, без списков и выделений — покупатель просто закроет карточку и уйдёт к конкуренту.</p>
-                        <p class="highlight-box">✅ Правильная структура: заголовок → ключевые преимущества → применение → характеристики</p>
+                <div class="after">
+                    <div class="label">После</div>
+                    <div class="text-content">
+                        <strong>Держатель для кабелей — организуйте провода на столе, в машине и дома</strong><br><br>
+                        
+                        Универсальные фиксаторы для зарядных кабелей, наушников, USB-проводов толщиной от 2.8 до 6.8 мм.<br><br>
+                        
+                        <strong>Преимущества:</strong><br>
+                        • Без магнитов — не вредит картам и гаджетам<br>
+                        • Гладкие края — не царапают кабели<br>
+                        • Механическая блокировка — надежнее магнитных<br>
+                        • Устойчивы к температурам — для авто и ванной<br><br>
+                        
+                        <strong>Применение:</strong> офис, дом, автомобиль, кровать
                     </div>
                 </div>
             </div>
             
-            <div class="why-me-section">
-                <h3>🎯 Почему стоит работать именно со мной</h3>
-                
-                <div class="why-me-grid">
-                    <div class="why-me-card">
-                        <div class="why-me-icon">💰</div>
-                        <h4>Доступная цена</h4>
-                        <p>200₽ за товар вместо 500-1500₽ у агентств. Для новых продавцов это критично — можно улучшить 50 товаров за 10,000₽ вместо 75,000₽.</p>
-                    </div>
-                    
-                    <div class="why-me-card">
-                        <div class="why-me-icon">🎁</div>
-                        <h4>Бесплатный тест</h4>
-                        <p>Первые 2-3 карточки делаю бесплатно. Вы смотрите результат, и только потом решаете продолжать или нет. Никакого риска для вас.</p>
-                    </div>
-                    
-                    <div class="why-me-card">
-                        <div class="why-me-icon">🔍</div>
-                        <h4>Специализация на маркетплейсах</h4>
-                        <p>Знаю специфику WB и Ozon — какие ключевые слова работают, как пишут успешные продавцы, какие требования у алгоритмов поиска.</p>
-                    </div>
-                    
-                    <div class="why-me-card">
-                        <div class="why-me-icon">⚡</div>
-                        <h4>Быстрая работа</h4>
-                        <p>1 товар = 30-60 минут работы. Могу сделать 10-20 товаров за 1-2 дня. Не нужно ждать неделями, как с агентствами.</p>
-                    </div>
-                    
-                    <div class="why-me-card">
-                        <div class="why-me-icon">📊</div>
-                        <h4>Фокус на результате</h4>
-                        <p>Цель — не просто "красивый текст", а рост показов в поиске и продаж. Использую проверенные SEO-методики и анализ конкурентов.</p>
-                    </div>
-                    
-                    <div class="why-me-card">
-                        <div class="why-me-icon">🤝</div>
-                        <h4>Гарантия качества</h4>
-                        <p>Если описание не устроит — бесплатно переделаю или верну деньги. Работаю на долгосрочные отношения, а не на разовую сделку.</p>
-                    </div>
+            <div class="results">
+                <div class="result-item">
+                    <div class="result-number">+60%</div>
+                    <div class="result-label">кликов на карточку</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">+35%</div>
+                    <div class="result-label">продаж</div>
                 </div>
             </div>
         </div>
-
-        <!-- Testimonials -->
-        <div class="testimonials">
-            <h2>💬 Отзывы продавцов</h2>
-            
-            <div class="testimonials-note">
-                <p><em>Я только начинаю набирать портфолио, поэтому предлагаю первым клиентам бесплатный тест. Здесь будут отзывы тех, кто уже попробовал мои услуги:</em></p>
+    </div>
+    
+    <!-- Process -->
+    <div class="process">
+        <h2 class="section-title">Как начнём работать</h2>
+        
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-title">Вы отправляете товары</div>
+                <div class="step-description">Скиньте ссылки на 2-3 товара, которые хотите улучшить</div>
             </div>
             
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">👤</div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Ваш отзыв может быть здесь</div>
-                            <div class="testimonial-role">Первые клиенты получают бесплатный тест</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-text">
-                        Попробуйте бесплатно 2-3 карточки, и если результат понравится — я добавлю ваш отзыв в портфолио. Это взаимовыгодно: вы получаете качественные описания, я — опыт и репутацию.
-                    </div>
-                </div>
-                
-                <!-- Template for future testimonials - currently hidden -->
-                <div class="testimonial-card" style="display: none;">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">ИИ</div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Иван Иванов</div>
-                            <div class="testimonial-role">Магазин "TechGadget", 50+ товаров</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-text">
-                        "Описания стали намного лучше! Товары начали находить в поиске по запросам, о которых я даже не думал. Показы выросли на 40% за первую неделю. Рекомендую!"
-                    </div>
-                    <div class="testimonial-result">
-                        📊 Результат: +40% показов, +8 продаж в неделю
-                    </div>
-                </div>
-                
-                <div class="testimonial-card" style="display: none;">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">АП</div>
-                        <div class="testimonial-info">
-                            <div class="testimonial-name">Анна Петрова</div>
-                            <div class="testimonial-role">Магазин "BeautyShop", handmade косметика</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-text">
-                        "Я не знала, как правильно описывать товары для поиска. Автор сделал всё быстро и понятно объяснил, почему именно так. Цена символическая, а результат видно сразу."
-                    </div>
-                    <div class="testimonial-result">
-                        📊 Результат: +60% кликов на карточки
-                    </div>
-                </div>
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-title">Я делаю бесплатно</div>
+                <div class="step-description">Переписываю описания с SEO-оптимизацией бесплатно за 12-24 часа</div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-title">Вы проверяете</div>
+                <div class="step-description">Смотрите результат и решаете, продолжать ли работать</div>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <div class="step-title">Продолжаем</div>
+                <div class="step-description">Если понравилось — работаем дальше по выбранному тарифу</div>
             </div>
         </div>
-
-        <!-- How It Works -->
-        <div class="how-it-works">
-            <h2>Как мы начнём работать</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Вы отправляете товары</h3>
-                    <p>Скиньте ссылки на 2-3 товара, которые хотите улучшить</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Я делаю бесплатно</h3>
-                    <p>Переписываю описания с SEO-оптимизацией бесплатно</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Вы проверяете</h3>
-                    <p>Смотрите результат и решаете, продолжать ли работать</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Продолжаем</h3>
-                    <p>Если понравилось — работаем дальше за 200₽/товар</p>
-                </div>
-            </div>
+    </div>
+    
+    <!-- CTA -->
+    <div class="cta">
+        <h2>Готовы улучшить свои карточки?</h2>
+        <p>Первые 2-3 товара делаю бесплатно — вы ничем не рискуете</p>
+        <a href="#" class="cta-button">Написать в Telegram</a>
+        
+        <div class="guarantee">
+            Гарантия качества: грамотный текст, SEO-оптимизация, структура.<br>
+            Если есть недочёты — бесплатно исправлю в течение 7 дней.
         </div>
-
-        <!-- CTA -->
-        <div class="cta">
-            <h2>Готовы улучшить свои карточки?</h2>
-            <p>Первые 2-3 товара делаю бесплатно — вы ничем не рискуете</p>
-            <a href="#" class="cta-button">📱 Написать в Telegram</a>
-            
-            <div class="guarantee">
-                <strong>🎯 Гарантия:</strong><br>
-                Если после моей работы описание не станет лучше —<br>
-                я бесплатно переделаю или верну деньги. Без риска для вас.
+    </div>
+    
+    <!-- Contact -->
+    <div class="contact">
+        <h3>Контакты</h3>
+        <div class="contact-info">
+            <div class="contact-item">
+                Telegram: <a href="#">@ваш_телеграм</a>
+            </div>
+            <div class="contact-item">
+                Email: <a href="#">ваш@email.com</a>
             </div>
         </div>
     </div>
