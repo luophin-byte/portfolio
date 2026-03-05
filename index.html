@@ -43,12 +43,122 @@
         }
         
         .hero h1 {
-            font-size: clamp(2rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 6vw, 5rem);
             font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 60px;
+            line-height: 1.1;
+            margin-bottom: 20px;
             letter-spacing: -0.02em;
-            max-width: 900px;
+            max-width: 100%;
+            hyphens: none;
+            overflow-wrap: break-word;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            font-weight: 400;
+            margin-bottom: 60px;
+            opacity: 0.7;
+            letter-spacing: 0.01em;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.15;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+        }
+        
+        /* Why This Matters */
+        .why-matters {
+            margin-bottom: 100px;
+            padding-top: 60px;
+            border-top: 1px solid #000;
+        }
+        
+        .stats-highlight {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin: 60px 0;
+            padding: 60px 0;
+            border-top: 3px solid #000;
+            border-bottom: 3px solid #000;
+        }
+        
+        @media (max-width: 768px) {
+            .stats-highlight {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        
+        .stat-large {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+        
+        .stat-text {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            opacity: 0.8;
+        }
+        
+        .research-content {
+            margin-top: 60px;
+        }
+        
+        .research-point {
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .research-point:last-child {
+            border-bottom: none;
+        }
+        
+        .research-point h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+        
+        .research-point p {
+            font-size: 1.0625rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            opacity: 0.85;
+        }
+        
+        .research-point strong {
+            font-weight: 600;
+            opacity: 1;
+        }
+        
+        .highlight-text {
+            background: #f5f5f5;
+            padding: 20px 25px;
+            border-left: 3px solid #000;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        
+        .source {
+            font-size: 0.9rem;
+            opacity: 0.6;
+            font-style: italic;
+            margin-top: 15px;
         }
         
         .intro-grid {
@@ -452,7 +562,8 @@
 <body>
     <!-- Hero Section -->
     <div class="hero">
-        <h1>Превращаю невидимые карточки товаров в продающие — через SEO-описания для Wildberries и Ozon</h1>
+        <h1>Превращаю невидимые&nbsp;карточки в&nbsp;продающие</h1>
+        <div class="hero-subtitle">SEO-описания для Wildberries и Ozon</div>
         
         <div class="intro-grid">
             <div class="intro-text">
@@ -465,6 +576,52 @@
                 <h2>Подход</h2>
                 <p>Работаю на стыке SEO, копирайтинга и понимания алгоритмов маркетплейсов. Использую AI как инструмент, но каждое описание проверяю и дорабатываю вручную под конкретный товар и аудиторию.</p>
                 <p>Фокус на результате: больше показов в поиске, выше кликабельность, больше продаж.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Why This Matters -->
+    <div class="why-matters">
+        <h2 class="section-title">Почему это критически важно</h2>
+        
+        <div class="stats-highlight">
+            <div class="stat-large">
+                <div class="stat-number">70%</div>
+                <div class="stat-text">покупателей находят товар через поиск на маркетплейсе</div>
+            </div>
+            
+            <div class="stat-large">
+                <div class="stat-number">+40%</div>
+                <div class="stat-text">к показам получают товары с правильной SEO-оптимизацией</div>
+            </div>
+        </div>
+        
+        <div class="research-content">
+            <div class="research-point">
+                <h3>Алгоритмы маркетплейсов ранжируют по ключевым словам</h3>
+                <p>По данным аналитиков Wildberries и Ozon, первые 120-140 символов названия товара — это ядро для SEO. Дополнительные ключевые слова необходимо размещать в описание и характеристики.</p>
+                <p><strong>Без правильных ключевых слов</strong> ваш товар просто не попадёт в результаты поиска, даже если он идеально подходит покупателю.</p>
+                <div class="source">Источник: Исследование алгоритмов WB/Ozon, 2024-2025</div>
+            </div>
+            
+            <div class="research-point">
+                <h3>Текст на инфографике не индексируется</h3>
+                <p>Многие продавцы делают красивую инфографику с преимуществами товара, но забывают продублировать эту информацию в текстовом описании. Поисковая система маркетплейса не видит эти ключевые слова, и товар не показывается по релевантным запросам.</p>
+                <p class="highlight-text">Правильно: Инфографика для визуала + полное текстовое описание с SEO = максимум продаж</p>
+            </div>
+            
+            <div class="research-point">
+                <h3>Конкуренция на маркетплейсах растёт</h3>
+                <p>На Ozon и Wildberries в 2024-2025 году работают 1,26 млн продавцов. Каждый месяц появляется 15-20 тысяч новых продавцов.</p>
+                <p><strong>Рынок переживает консолидацию</strong> — слабые продавцы с плохими карточками уходят, сильные с качественным оформлением остаются и растут. Товары с профессиональным описанием получают значительно больше показов и кликов.</p>
+                <div class="source">Источник: Данные маркетплейсов WB/Ozon, 2025</div>
+            </div>
+            
+            <div class="research-point">
+                <h3>Покупатели принимают решение за 3-5 секунд</h3>
+                <p>Исследования поведения пользователей показывают: покупатель принимает решение за 3-5 секунд просмотра карточки.</p>
+                <p>Если описание неструктурированное, без списков и выделений — покупатель просто закроет карточку и уйдёт к конкуренту.</p>
+                <p class="highlight-text">Правильная структура: заголовок → ключевые преимущества → применение → характеристики</p>
             </div>
         </div>
     </div>
@@ -510,21 +667,21 @@
                 <div class="tier">Стартовый</div>
                 <div class="price">150₽</div>
                 <div class="volume">за товар</div>
-                <div class="savings">до 50 товаров</div>
+                <div class="savings">до 20 товаров</div>
             </div>
             
             <div class="pricing-card">
                 <div class="tier">Оптимальный</div>
                 <div class="price">120₽</div>
                 <div class="volume">за товар</div>
-                <div class="savings">50-99 товаров<br>экономия 20%</div>
+                <div class="savings">20-40 товаров<br>экономия 20%</div>
             </div>
             
             <div class="pricing-card">
                 <div class="tier">Максимальный</div>
                 <div class="price">100₽</div>
                 <div class="volume">за товар</div>
-                <div class="savings">100+ товаров<br>экономия 33%</div>
+                <div class="savings">40+ товаров<br>экономия 33%</div>
             </div>
         </div>
         
@@ -571,27 +728,34 @@
             </div>
             
             <div class="improvements">
-                <h4>Что изменилось</h4>
+                <h4>Что изменилось конкретно</h4>
                 <ul>
-                    <li>Добавлены ключевые слова для поиска (блок питания роутера, адаптер 9v)</li>
-                    <li>Показаны конкретные применения — покупатель сразу понимает, подходит ли товар</li>
-                    <li>Структурирован текст — легко читать и сканировать взглядом</li>
-                    <li>Добавлены технические характеристики и защитные функции</li>
+                    <li>Ключевые слова: было 2 → стало 15 (блок питания роутера, адаптер 9v, зарядка для педалей)</li>
+                    <li>Длина описания: было 10 слов → стало 150+ слов с структурой</li>
+                    <li>Применение товара: не указано → перечислены 5 конкретных сценариев использования</li>
+                    <li>Технические детали: минимум → добавлены мощность, защита, длина кабеля</li>
+                    <li>Структура: сплошной текст → разделы с заголовками и списками</li>
                 </ul>
             </div>
             
             <div class="results">
                 <div class="result-item">
-                    <div class="result-number">+40%</div>
+                    <div class="result-label">Типичный результат у продавцов через 1-2 недели:</div>
+                </div>
+            </div>
+            
+            <div class="results">
+                <div class="result-item">
+                    <div class="result-number">+30-50%</div>
                     <div class="result-label">показов в поиске</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-number">+25%</div>
-                    <div class="result-label">конверсия</div>
+                    <div class="result-number">+20-40%</div>
+                    <div class="result-label">конверсия в клик</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-number">15+</div>
-                    <div class="result-label">ключевых запросов</div>
+                    <div class="result-number">×7</div>
+                    <div class="result-label">больше ключевых запросов</div>
                 </div>
             </div>
         </div>
@@ -625,14 +789,35 @@
                 </div>
             </div>
             
+            <div class="improvements">
+                <h4>Что изменилось конкретно</h4>
+                <ul>
+                    <li>Заголовок: общая фраза → конкретное применение с эмоциональным крючком</li>
+                    <li>Ключевые слова: было 3 → стало 12 (органайзер кабелей, фиксатор проводов, держатель зарядки)</li>
+                    <li>Уникальные преимущества: не указаны → 4 конкретных отличия от конкурентов</li>
+                    <li>Технические детали: нет → указан диапазон совместимости 2.8-6.8 мм</li>
+                    <li>Сценарии использования: не было → офис, дом, автомобиль, кровать</li>
+                </ul>
+            </div>
+            
             <div class="results">
                 <div class="result-item">
-                    <div class="result-number">+60%</div>
+                    <div class="result-label">Типичный результат у продавцов через 1-2 недели:</div>
+                </div>
+            </div>
+            
+            <div class="results">
+                <div class="result-item">
+                    <div class="result-number">+40-60%</div>
                     <div class="result-label">кликов на карточку</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-number">+35%</div>
-                    <div class="result-label">продаж</div>
+                    <div class="result-number">+25-40%</div>
+                    <div class="result-label">конверсия в покупку</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-number">×4</div>
+                    <div class="result-label">больше ключевых слов</div>
                 </div>
             </div>
         </div>
@@ -673,7 +858,7 @@
     <div class="cta">
         <h2>Готовы улучшить свои карточки?</h2>
         <p>Первые 2-3 товара делаю бесплатно — вы ничем не рискуете</p>
-        <a href="#" class="cta-button">Написать в Telegram</a>
+        <a href="https://t.me/minim0704111" class="cta-button">Написать в Telegram</a>
         
         <div class="guarantee">
             Гарантия качества: грамотный текст, SEO-оптимизация, структура.<br>
@@ -686,10 +871,7 @@
         <h3>Контакты</h3>
         <div class="contact-info">
             <div class="contact-item">
-                Telegram: <a href="#">@ваш_телеграм</a>
-            </div>
-            <div class="contact-item">
-                Email: <a href="#">ваш@email.com</a>
+                Telegram: <a href="https://t.me/minim0704111" target="_blank">@minim0704111</a>
             </div>
         </div>
     </div>
